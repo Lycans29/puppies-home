@@ -1,0 +1,20 @@
+<app-mensaje></app-mensaje>
+
+<div class="container mt-5 my-5">
+  <app-ver-cachorros (verCachorros)= "irACachorros()"></app-ver-cachorros>
+
+  <app-servicios></app-servicios>
+
+  <app-destacados [perritos]="perritos" (conocerMas)="abrirModal($event)"></app-destacados>
+  @if(cachorroSeleccionado){
+    <app-conoce 
+      [cachorro]="cachorroSeleccionado"
+      (cerrar)="cerrarModal()">
+    </app-conoce>
+  }
+
+  <app-doctora-bio></app-doctora-bio>
+  <app-ubicacion></app-ubicacion>
+
+</div>
+

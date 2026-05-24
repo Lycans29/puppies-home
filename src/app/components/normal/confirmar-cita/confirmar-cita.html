@@ -1,0 +1,62 @@
+<!-- BACKDROP -->
+<div class="modal-backdrop" (click)="cerrarModal()"></div>
+
+<!-- MODAL -->
+<div class="modal-box" role="dialog" aria-modal="true">
+
+  <!-- CERRAR -->
+  <button class="btn-cerrar" (click)="cerrarModal()" aria-label="Cerrar modal">✕</button>
+
+  <!-- LOGO -->
+  <div class="modal-logo">
+    <img src="img/logo.svg" alt="The Puppies Home" />
+  </div>
+
+  <!-- TÍTULO -->
+  <h2 class="modal-titulo">¡Cita Confirmada con Éxito!</h2>
+  <p class="modal-subtitulo">
+    Tu peludo amigo está en buenas manos. Hemos agendado tu cita correctamente.
+  </p>
+
+  <!-- DETALLES -->
+  <div class="detalles-box">
+    <h3 class="detalles-titulo">Detalles de la Cita</h3>
+
+    <div class="detalles-grid">
+
+      <div class="detalle-item">
+        <div class="detalle-icono"><i class="bi bi-person-hearts "></i></div>
+        <div>
+          <span class="detalle-label">Tipo de Mascota</span>
+          <span class="detalle-valor">{{ tipo }}</span>
+        </div>
+      </div>
+
+      <div class="detalle-item">
+        <div class="detalle-icono"><i class="bi bi-scissors"></i></div>
+        <div>
+          <span class="detalle-label">Servicio</span>
+          <span class="detalle-valor">{{ servicio }}</span>
+        </div>
+      </div>
+
+      <div class="detalle-item">
+        <div class="detalle-icono"><i class="bi bi-calendar3"></i></div>
+        <div>
+          <span class="detalle-label">Fecha</span>
+          <span class="detalle-valor">{{ fecha }}</span>
+        </div>
+      </div>
+
+      <div class="detalle-item">
+        <div class="detalle-icono"><i class="bi bi-clock"></i></div>
+        <div>
+          <span class="detalle-label">Hora</span>
+          <span class="detalle-valor">{{ hora }}</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

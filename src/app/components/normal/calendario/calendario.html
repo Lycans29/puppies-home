@@ -1,0 +1,68 @@
+<section class="section-padding">
+
+  <div class="d-flex align-items-center mb-4">
+    <div class="badge-numero">3</div>
+    <h2 class="ms-3 mb-0">Elige Fecha y Hora</h2>
+  </div>
+
+  <div class="calendario-box">
+    <div class="row">
+
+      <!-- IZQUIERDA: CALENDARIO -->
+      <div class="col-md-6 mb-4">
+
+    <!-- NAVEGACIÓN MES -->
+<div class="d-flex align-items-center justify-content-between mb-3">
+  <button class="btn-nav" (click)="mesAnterior()">&#8249;</button>
+  <h3 class="fecha mb-0">{{ nombreMes }}</h3>
+  <button class="btn-nav" (click)="mesSiguiente()">&#8250;</button>
+</div>
+
+<!-- GRID -->
+<div class="cal-grid">
+  <div class="cal-dia-header">Do</div>
+  <div class="cal-dia-header">Lu</div>
+  <div class="cal-dia-header">Ma</div>
+  <div class="cal-dia-header">Mi</div>
+  <div class="cal-dia-header">Ju</div>
+  <div class="cal-dia-header">Vi</div>
+  <div class="cal-dia-header">Sa</div>
+
+  @for (dia of diasDelMes; track $index) {
+    @if (dia === null) {
+      <div></div>
+    } @else {
+      <div
+        class="cal-dia"
+        [class.active]="diaSeleccionado === dia"
+         [class.pasado]="esPasado(dia)"
+        (click)="seleccionarDia(dia)">
+        {{ dia }}
+      </div>
+    }
+  }
+</div>
+
+      </div>
+
+      <!-- DERECHA: HORARIOS -->
+      <div class="col-md-6">
+        <h3 class="mb-3 text-warning">Horarios Disponibles</h3>
+        <div class="row g-3">
+          @for (hora of horarios; track hora) {
+            <div class="col-6">
+              <button
+                class="btn-hora"
+                [class.active]="horarioSeleccionado === hora"
+                (click)="seleccionarHora(hora)">
+                {{ hora }}
+              </button>
+            </div>
+          }
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>

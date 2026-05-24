@@ -1,0 +1,32 @@
+<div class="container">
+    <app-banner-cachorros></app-banner-cachorros>
+    <app-filtro-cachorros (filtroAplicado)="filtrarCachorros($event)"></app-filtro-cachorros>
+    <h1 class="espacio-sm">Cachorros disponibles</h1>
+    <p>Encuentra el compañero perfecto, especializados en razas pequeñas para tu hogar.</p>
+    <div class="row gx-4 gy-5 mt-3">
+    @for (perrito of perritosPagina; track perrito.nombre) {
+        <div class="col-md-4">
+            <app-tarjeta-cachorro
+            [cachorro]="perrito"
+                (conocerMas)="abrirModal($event)">
+            </app-tarjeta-cachorro>
+        </div>
+    }
+  </div>
+
+  <app-paginacion
+    [totalPaginas]="totalPaginas"
+    [paginaActual]="paginaActual"
+    (paginaCambiada)="cambiarPagina($event)">
+  >
+    
+  </app-paginacion>
+
+  <!-- Modal -->
+  @if (cachorroSeleccionado) {
+    <app-conoce
+      [cachorro]="cachorroSeleccionado"
+      (cerrar)="cerrarModal()">
+    </app-conoce>
+  }
+</div>

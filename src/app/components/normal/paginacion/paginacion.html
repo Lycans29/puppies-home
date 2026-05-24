@@ -1,0 +1,26 @@
+<div class="paginacion">
+ 
+  <!-- ANTERIOR -->
+  <button class="pag-btn"
+    [class.deshabilitado]="paginaActual === 1"
+    (click)="irA(paginaActual - 1)">
+    ‹
+  </button>
+ 
+  <!-- NÚMEROS -->
+  @for (pagina of paginas; track pagina) {
+    <button class="pag-btn"
+      [class.activo]="pagina === paginaActual"
+      (click)="irA(pagina)">
+      {{ pagina }}
+    </button>
+  }
+ 
+  <!-- SIGUIENTE -->
+  <button class="pag-btn"
+    [class.deshabilitado]="paginaActual === totalPaginas"
+    (click)="irA(paginaActual + 1)">
+    ›
+  </button>
+ 
+</div>

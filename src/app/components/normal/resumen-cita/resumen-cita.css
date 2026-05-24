@@ -1,0 +1,145 @@
+/* Hereda del global: --verde-principal, --naranja-secundario,
+   --texto-contraste, --pagina-blanco, --transition, font-family Manrope */
+
+/* === ASIDE === */
+.aside {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+/* === TARJETA === */
+.tarjeta {
+  background-color: var(--pagina-blanco);
+  border: 1px solid #c6c8b0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow:
+    0px 4px 6px -4px rgba(0, 0, 0, 0.3),
+    0px 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+/* === IMAGEN HEADER === */
+.imagen-header {
+  position: relative;
+  width: 100%;
+  height: 128px;
+  overflow: hidden;
+}
+
+.imagen-perro {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.20);
+}
+
+.imagen-titulo {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--texto-contraste);
+  /* hereda font-family Manrope del body global */
+}
+
+/* === CONTENIDO === */
+.contenido {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === FILAS INFO === */
+.fila-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #f5f5f4;
+}
+
+.fila-label {
+  font-size: 20px;
+  font-weight: 400;
+  color: #78716c;
+  /* hereda Manrope del body */
+}
+
+.fila-valor {
+  font-size: 18px;
+  font-weight: 700;
+  color: #191d17;
+}
+
+.fila-valor.verde {
+  color: var(--verde-principal);
+}
+
+/* === TOTALES === */
+.totales {
+  background-color: #f2f5ec;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fila-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-label,
+.total-valor {
+  font-size: 18px;
+  font-weight: 400;
+  color: #57534e;
+}
+
+.negrita {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #191d17 !important;
+}
+
+
+.aviso {
+  font-size: 14px;
+  font-weight: 400;
+  color: #a8a29e;
+  text-align: center;
+  line-height: 16px;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+/* === RESPONSIVE — mismo breakpoint del global === */
+@media (max-width: 768px) {
+  .aside {
+    width: 100%;
+  }
+
+  .tarjeta {
+    border-radius: 10px;
+  }
+
+  .imagen-header {
+    height: 160px;
+  }
+
+  .contenido {
+    padding: 16px;
+  }
+}

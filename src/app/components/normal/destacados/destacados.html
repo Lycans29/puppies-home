@@ -1,0 +1,30 @@
+
+  <div class="container my-5">
+    <span id="aviso" class="badge rounded-pill text-white px-3 py-2 my-4">NUEVOS INTEGRANTES</span>
+    <h2 class="titulo my-3">Cachorros Destacados</h2>
+
+      <div class="row">
+        @for (perrito of perritos; track perrito.nombre){
+        <div class="col-sm-6 col-md-4 py-4">
+          <div class="card puppy-card h-100">
+            
+            <span class="badge-disponibilidad" [class.bg-gris]="perrito.disponible" [class.bg-rojo]="!perrito.disponible">
+              {{ perrito.disponible ? 'DISPONIBLE' : 'NO DISPONIBLE' }}
+            </span>
+
+            <img [src]="perrito.imagen" class="card-img-top" [alt]="perrito.nombre + ' - ' + perrito.raza" >
+            
+            <div class="card-body">
+              <h5>{{ perrito.nombre }}</h5>
+              <p>{{ perrito.raza }}</p>
+              
+              <div class="d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-calendar fs-4"></i> {{ perrito.edad }}</span>
+                <button class="btn-custom" (click)="verDetalle(perrito)">Conocer más →</button>
+              </div>
+            </div>
+          </div>
+        </div>}
+    </div>
+  </div>
+

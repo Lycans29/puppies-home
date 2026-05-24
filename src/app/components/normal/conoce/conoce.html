@@ -1,0 +1,107 @@
+<div class="modal-overlay d-flex justify-content-center align-items-center">
+  <div class="modal-container bg-white rounded-4 p-3 container" role="dialog" aria-modal="true">
+
+    <!-- HEADER -->
+    <div class="position-relative d-flex align-items-center justify-content-end mb-3">
+      <h2 class="position-absolute start-50 translate-middle-x m-0">
+        Conóceme
+      </h2>
+      <button class="btnX" (click)="cerrarModal()" aria-label="Cerrar modal" >✖</button>
+    </div>
+
+    <!-- BODY -->
+    <div class="row g-3">
+
+      <!-- IZQUIERDA -->
+      <div class="col-md-6">
+
+        <div class="position-relative">
+          <img [src]="cachorro?.imagen" [alt]="cachorro.nombre + ' - ' + cachorro.raza" class="img-fluid rounded-3 w-100 h">
+
+          <!-- BADGE DINÁMICO -->
+         <span 
+                class="badge"
+                [class.bg-gris]="cachorro?.disponible"
+                [class.bg-rojo]="!cachorro?.disponible">
+                {{ cachorro?.disponible ? 'DISPONIBLE' : 'NO DISPONIBLE' }}
+            </span>
+        </div>
+
+      </div>
+
+      <!-- DERECHA -->
+      <div class="col-md-6 d-flex flex-column">
+        <div class="bg-white p-3 rounded-3 flex-grow-1 d-flex flex-column ">
+
+          <h3>{{ cachorro?.nombre }}</h3>
+            <p class="ubicacion text-muted mb-2">
+                <i class="bi bi-geo-alt-fill me-1"></i> Bogotá
+            </p>
+          
+          <!-- GRID INFO -->
+          <div class="info row g-4 mb-3 ms-2">
+                <div class=" col-6">
+                <div>
+                    <small class="text-muted">RAZA</small>
+                    <p class="mb-0">{{ cachorro?.raza }}</p>
+                </div>
+                </div>
+
+                <div class="col-6">
+                <div>
+                    <small class="text-muted">EDAD</small>
+                    <p class="mb-0">{{ cachorro?.edad }}</p>
+                </div>
+                </div>
+
+                <div class="col-6">
+                <div>
+                    <small class="text-muted">TAMAÑO</small>
+                    <p class="mb-0">{{ cachorro?.tamano }}</p>
+                </div>
+                </div>
+
+                <div class="col-6">
+                <div >
+                    <small class="text-muted">GÉNERO</small>
+                    <p class="mb-0">{{ cachorro?.genero }}</p>
+                </div>
+                </div>
+          </div>
+
+          <!-- BADGES SALUD -->
+          <div class="d-flex flex-wrap gap-2 mb-3 ms-2 py-2">
+            @for (item of cachorro?.salud; track item) {
+              <span class="badgeSalud px-3 py-2">
+                {{ item }}
+              </span>
+            }
+          </div>
+
+          <!-- BOTÓN -->
+          <a [href]="'https://api.whatsapp.com/send?phone=' + telefonoLink + '&text=' + getMensaje()"
+                target="_blank"
+                class="btn-custom w-100 text-decoration-none text-center">
+                 <i class="bi bi-whatsapp me-1"></i> Contáctanos
+            </a>
+
+          <p class="text-center mt-2 text-muted">
+            Respuesta estimada 24-48 horas
+          </p>
+
+           <!-- FOOTER -->
+            <div class="text-center">
+                <button class="btn-pedigri rounded-pill px-4 fw-semibold">
+                    <i class="bi bi-shield-check me-2"></i>Garantía Pedigrí
+                </button>
+            </div>
+
+        </div>
+      </div>
+
+    </div>
+
+   
+
+  </div>
+</div>

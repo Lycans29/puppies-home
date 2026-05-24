@@ -1,0 +1,104 @@
+.doctora-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+
+.doctora-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.doctora-descripcion {
+  color: var(--texto-pagina);
+  margin: 0;
+}
+
+
+/* =========================
+   CHIPS
+========================= */
+
+.doctora-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1.5px solid var(--verde-principal);
+  color: var(--verde-principal);
+  font-size: 20px;
+  font-weight: 600;
+  background: white;
+}
+
+.chip:hover {
+  background-color: var(--verde-principal);
+  color: #fff;
+  border-color: var(--verde-principal);
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+
+
+/* =========================
+   FOTO
+========================= */
+
+.doctora-foto-contenedor {
+  background-color: #F5EFE6;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.doctora-foto {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 20px;
+}
+
+.btn-custom {
+  width: 200px;
+  
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .doctora-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .doctora-info {
+    text-align: center;
+  }
+
+  .doctora-info {
+    order: 2;
+  }
+
+  .doctora-foto-contenedor {
+    order: 1; 
+  }
+  .doctora-foto {
+    max-height: 380px;
+  }
+}

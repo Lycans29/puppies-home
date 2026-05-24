@@ -1,0 +1,58 @@
+<!-- HERO BANNER -->
+<div class="hero">
+  <img src="img/veterinaria.jpg" alt="Agenda una Cita" class="hero-img" />
+  <div class="hero-overlay">
+    <h1>Agenda una Cita</h1>
+    <p>Ofrecemos el mejor cuidado orgánico y profesional para tus compañeros más queridos. Reserva ahora y asegura un espacio de bienestar para tu mascota.</p>
+  </div>
+</div>
+
+<div class="container py-2">
+  <div class="row">
+
+    <div class="col-lg-8">
+      <app-tipo-mascota
+        (seleccionarMascota)="onTipoSeleccionado($event)">
+      </app-tipo-mascota>
+
+      <app-servicio-selector
+        (seleccionarServicio)="onServicioSeleccionado($event)">
+      </app-servicio-selector>
+
+      <app-calendario
+        (fechaHoraSeleccionada)="onFechaHora($event)">
+      </app-calendario>
+
+      <app-propietario-form
+        (datosEnviados)="onDatosEnviados($event)">
+      </app-propietario-form>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="resumen-sticky">
+        <app-resumen-cita
+          [tipo]="tipo"
+          [servicio]="servicio"
+          [fecha]="fecha"
+          [hora]="hora"
+          [mascota]="mascota"
+          [subtotal]="subtotal"
+          [total]="total"
+          [propietario]="propietario"
+          (confirmar)="onConfirmar()">
+        </app-resumen-cita>
+      </div>
+    </div>
+
+  @if (mostrarModal) {
+  <app-confirmar-cita
+    [tipo]="tipo"
+    [servicio]="servicio"
+    [fecha]="fecha"
+    [hora]="hora"
+    (cerrar)="cerrarModal()">
+  </app-confirmar-cita>
+}
+
+  </div>
+</div>

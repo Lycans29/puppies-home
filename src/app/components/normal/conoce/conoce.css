@@ -1,0 +1,140 @@
+/* OVERLAY */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px); /* efecto moderno */
+  z-index: 1000;
+}
+
+.btnX{
+  color: var(--verde-principal);
+  font-size: 40px;
+  border: none;
+  background-color: var(--pagina-blanco);
+}
+
+/* CONTENEDOR */
+.modal-container {
+  max-width: 900px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  animation: aparecer 0.3s ease;
+}
+
+/* ANIMACIÓN */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.ubicacion i {
+ color: var(--verde-principal);
+}
+
+.position-relative img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.fotos{
+    background-color: var(--naranja-secundario);
+    color: var(--texto-contraste);
+
+}
+
+/* BADGE DISPONIBILIDAD (SIN CHOCAR CON BOOTSTRAP) */
+.position-relative .badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 6px 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+
+/* BADGES SALUD */
+.badgeSalud {
+  font-size: 16px;
+  border-radius: 12px;
+  border: 2px solid var(--verde-principal);
+  color: var(--verde-principal);
+}
+
+.badgeSalud:hover {
+  background-color: var(--verde-principal);
+  color: white;
+}
+
+.badge{
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  z-index: 10;
+}
+
+small {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.info p {
+  font-weight: bold;
+}
+.btn-pedigri {
+  background-color: white;
+  color: var(--naranja-secundario);
+  border: 2px solid var(--naranja-secundario);
+  padding: 10px 24px;
+  font-size: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-top: 70px;
+  transition: var(--transition);
+  width: 250px;
+}
+
+.btn-pedigri:hover {
+  background-color: var(--naranja-secundario);
+  color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+ .modal-overlay {
+    align-items: flex-start; /* empieza desde arriba */
+    overflow-y: auto; /* permite scroll */
+  }
+
+  .modal-container {
+    width: 95%;
+    max-height: 90vh;
+    overflow-y: auto;
+    margin: 20px auto;
+  }
+
+  .position-relative img {
+    height: 100%; 
+  }
+
+  .btn-pedigri {
+    margin-top: 16px; /* ← reduce aquí directo */
+  }
+
+  .d-flex.flex-wrap.gap-2 {
+    justify-content: center;
+  }
+
+  
+  
+  
+}

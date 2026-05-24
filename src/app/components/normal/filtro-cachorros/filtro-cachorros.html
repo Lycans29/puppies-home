@@ -1,0 +1,37 @@
+<div class="filtro-cachorros">
+
+  <div class="row g-5 justify-content-center align-items-end text-center">
+
+    <!-- RAZA -->
+    <div class="col-md-3 d-flex flex-column align-items-strart">
+      <label class="form-label text-start">Cachorros</label>
+      <select class="form-select" [(ngModel)]="raza">
+        <option value="">Todos los Cachorros</option>
+        <option value="Pomerania">Pomerania</option>
+        <option value="Yorkshire">Yorkshire</option>
+        <option value="shitzu">shitzu</option>
+      </select>
+    </div>
+
+    <!-- EDAD -->
+    <div class="col-md-3 d-flex flex-column align-items-start">
+      <label class="form-label text-start">Edad</label>
+      <select class="form-select" [(ngModel)]="edad">
+        <option value="">Cualquier edad</option>
+        <option value="2 meses">2 meses</option>
+        <option value="3 meses">3 meses</option>
+        <option value="4 meses">4 meses</option>
+        <option value="1 año">1 año</option>
+      </select>
+    </div>
+
+    <!-- BOTÓN -->
+    <div class="col-md-3 d-flex justify-content-center">
+      <button class="btn-custom" (click)="aplicarFiltro()">
+        <i class="bi bi-filter me-2"></i> Filtrar
+      </button>
+    </div>
+
+  </div>
+
+</div>

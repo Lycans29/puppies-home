@@ -1,0 +1,135 @@
+/* NUMERO */
+.badge-numero {
+  background: var(--naranja-secundario);
+  color: var(--texto-contraste);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* CONTENEDOR */
+.calendario-box {
+  border: 2px solid #c6c8b0;
+  border-radius: 12px;
+  padding: 20px;
+  background: white;
+}
+
+/* GRID CALENDARIO */
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+/* DIAS HEADER */
+.cal-dia-header {
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+}
+
+/* DIA */
+.cal-dia {
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+/* HOVER */
+.cal-dia:hover {
+  background: var(--verde-principal);
+  color: white;
+}
+
+/* ACTIVO */
+.cal-dia.active {
+  background: var(--verde-principal);
+  color: white;
+  font-weight: bold;
+}
+
+/* BOTONES HORAS */
+.btn-hora {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #c6c8b0;
+  background: white;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+/* HOVER */
+.btn-hora:hover {
+  background: var(--verde-principal);
+  color: white;
+}
+
+/* ACTIVO */
+.btn-hora.active {
+  background: var(--verde-principal);
+  color: white;
+  border-color: var(--verde-principal);
+}
+
+.fecha{
+  color: var(--naranja-secundario);
+}
+
+.btn-nav {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: var(--verde-principal);
+  cursor: pointer;
+  padding: 0 10px;
+  line-height: 1;
+}
+
+.btn-nav:hover {
+  color: var(--naranja-secundario);
+}
+
+.cal-dia.pasado {
+  opacity: 0.35;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+.row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .calendario-box {
+    overflow: hidden;
+  }
+
+  .col-md-6 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .cal-grid {
+    gap: 2px;
+    padding: 10px;
+  }
+
+  .cal-dia,
+  .cal-dia-header {
+    font-size: 12px;
+  }
+}

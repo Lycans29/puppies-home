@@ -1,0 +1,54 @@
+/* Estilos de la Tarjeta */
+.puppy-card {
+  border: 4px solid var(--naranja-secundario);
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.puppy-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Badge de Disponibilidad */
+.badge-disponibilidad {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  color: white;
+  z-index: 10;
+}
+
+/* Imagen */
+.card-img-top {
+  height: 380px;
+  width: 100%;
+  object-fit: cover;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+/* Ícono calendario */
+i {
+  color: var(--verde-principal);
+}
+
+.text-verde {
+  color: var(--verde-principal);
+  font-weight: 600;
+}
+
+.btn-custom{
+  font-size: 20px;
+}
+
+span{
+  font-size: 20px;
+}

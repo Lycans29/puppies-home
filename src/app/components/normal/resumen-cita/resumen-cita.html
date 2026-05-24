@@ -1,0 +1,66 @@
+<div class="aside">
+  <div class="tarjeta">
+
+    <!-- IMAGEN HEADER -->
+    <div class="imagen-header">
+      <img
+        src="img/cita.jpeg"
+        alt="Perrito en grooming"
+        class="imagen-perro"
+      />
+      <div class="overlay"></div>
+      <span class="imagen-titulo">Resumen de Cita</span>
+    </div>
+
+    <!-- CONTENIDO -->
+    <div class="contenido">
+
+      <div class="fila-info">
+        <span class="fila-label">Tipo</span>
+        <span class="fila-valor">{{ tipo || '-'}}</span>
+      </div>
+
+      <div class="fila-info">
+        <span class="fila-label">Servicio</span>
+        <span class="fila-valor verde">{{ servicio || '-'}}</span>
+      </div>
+
+      <div class="fila-info">
+        <span class="fila-label">Fecha</span>
+        <span class="fila-valor">{{ fecha || '-'}}</span>
+      </div>
+
+      <div class="fila-info">
+        <span class="fila-label">Hora</span>
+        <span class="fila-valor">{{ hora || '-'}}</span>
+      </div>
+
+      <div class="fila-info">
+        <span class="fila-label">Mascota</span>
+        <span class="fila-valor">{{ mascota || '-'}}</span>
+      </div>
+
+       <!-- TOTALES -->
+      <div class="totales">
+        <div class="fila-total">
+          <span class="total-label">Subtotal</span>
+          <span class="total-valor">{{ subtotal > 0 ? ('$ ' + subtotal.toFixed(3)) : '-' }}</span>
+        </div>
+        <div class="fila-total destaque">
+          <span class="total-label negrita">Total Estimado</span>
+          <span class="total-valor negrita">{{ total > 0 ? ('$ ' + total.toFixed(3)) : '-' }}</span>
+        </div>
+      </div>
+
+      <!-- BOTÓN — hereda .btn-custom global -->
+      <button class="btn-custom btn-confirmar" (click)="confirmarCita()">
+        Confirmar Cita
+      </button>
+
+      <p class="aviso">
+        Al confirmar, aceptas nuestras políticas de cancelación.
+      </p>
+
+    </div>
+  </div>
+</div>

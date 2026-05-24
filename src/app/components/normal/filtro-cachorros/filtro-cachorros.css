@@ -1,0 +1,43 @@
+.filtro-cachorros {
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+/* Mejora visual inputs */
+.form-select {
+   font-size: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 300px;
+}
+
+/* Espaciado */
+label {
+  color: var(--verde-principal);
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+ .filtro-cachorros {
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  .form-select {
+    font-size: 18px;
+    padding: 8px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* Cada filtro ocupa toda la fila */
+  .col-md-3 {
+    width: 100%;
+  }
+
+  .btn-custom {
+    width: 100%;
+  }
+}

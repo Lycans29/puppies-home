@@ -1,0 +1,59 @@
+.custom-navbar {
+  background-color: var(--pagina-blanco);
+  padding: 10px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Sombra sutil para separar del contenido */
+}
+
+
+/* Estilo de los enlaces del menú */
+.nav-link {
+  font-family: 'Dosis', sans-serif; /* Usamos Dosis para los menús */
+  font-weight: 700;
+  color: var(--verde-principal) !important;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--naranja-secundario) !important;
+}
+
+/* El link activo (donde está el usuario) */
+.active-link {
+  color: var(--naranja-secundario) !important;
+  border-bottom: 2px solid var(--naranja-secundario);
+}
+
+.logo-img{
+  height: 150px;
+}
+
+/* Ajustes para Tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+  .logo-img {
+    height: 120px; /* Logo más grande en tablet */
+  }
+}
+
+/* Ajustes para Celular */
+@media (max-width: 767px) {
+  .logo-img {
+    height: 90px;
+  }
+  
+  .navbar-nav {
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .nav-link {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+  }
+  
+  .active-link {
+    border-bottom: 1px solid var(--naranja-secundario);
+  }
+}

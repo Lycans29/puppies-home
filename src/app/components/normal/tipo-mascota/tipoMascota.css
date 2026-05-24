@@ -1,0 +1,84 @@
+/* BADGE NUMERO */
+.badge-numero {
+  background: var(--naranja-secundario);
+  color: var(--texto-contraste); /*  número blanco */
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* CARD */
+.card-mascota {
+  border: 2px solid #c6c8b0;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  cursor: pointer;
+  background: white;
+  transition: var(--transition);
+}
+
+/* HOVER */
+.card-mascota:hover {
+  background: var(--verde-principal);
+  color: white;
+}
+
+.card-mascota:hover h3,
+.card-mascota:hover p {
+  color: white;
+}
+
+.card-mascota:hover .icono-box {
+  background: white;
+  color: var(--verde-principal);
+}
+
+/* ACTIVO */
+.card-mascota.active {
+  background: var(--verde-principal);
+  border-color: var(--verde-principal);
+  color: white;
+}
+
+.card-mascota.active h3,
+.card-mascota.active p {
+  color: white;
+}
+
+.card-mascota.active .icono-box {
+  background: white;
+  color: var(--verde-principal);
+}
+
+/* ICONO */
+.icono-box {
+  background: var(--verde-principal);
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icono-box.light {
+  background: #f2f5ec;
+  color: var(--verde-principal);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .card-mascota {
+    flex-direction: column;
+    text-align: center;
+  }
+}

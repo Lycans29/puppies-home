@@ -1,0 +1,38 @@
+<div class="section-padding">
+
+  <div class="encabezado">
+    <div class="bolita">
+      <span class="numero">4</span>
+    </div>
+    <h2 class="titulo">Detalles del Propietario</h2>
+  </div>
+
+  <div class="tarjeta">
+    <form class="formulario" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+      <div class="fila-campos">
+        <div class="campo">
+          <label class="label" for="nombreDueno">Nombre del Dueño</label>
+          <input id="nombreDueno" class="input" type="text" placeholder="Tu nombre completo" formControlName="nombreDueno" />
+        </div>
+        <div class="campo">
+          <label class="label" for="nombreMascota">Nombre de la Mascota</label>
+          <input id="nombreMascota" class="input" type="text" placeholder="Ej: Max" formControlName="nombreMascota" />
+        </div>
+      </div>
+
+      <div class="fila-campos">
+        <div class="campo">
+          <label class="label" for="correo">Correo Electrónico</label>
+          <input id="correo" class="input" type="email" placeholder="email@ejemplo.com" formControlName="correo" />
+        </div>
+        <div class="campo">
+          <label class="label" for="telefono">Teléfono de Contacto</label>
+          <input id="telefono" class="input" type="tel" placeholder="+57 (300) 000-0000" formControlName="telefono" />
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+</div>

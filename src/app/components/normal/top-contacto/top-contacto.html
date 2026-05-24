@@ -1,0 +1,28 @@
+<div class="top-bar">
+  <div class="container d-flex justify-content-between align-items-center stack-mobile">
+    
+    <div class="contact-info">
+      <span class="copy-item" 
+            [cdkCopyToClipboard]="correo" 
+            (click)="copiado()" 
+            style="cursor: pointer;">
+        <i class="bi bi-envelope-fill me-2"></i> {{ correo }}
+      </span>
+    </div>
+
+    <div class="extra-info d-flex gap-3 stack-mobile">
+      <a [href]="'https://api.whatsapp.com/send?phone=' + telefonoLink" 
+         target="_blank" 
+         class="whatsapp-link">
+         <i class="bi bi-whatsapp me-1"></i> {{ telefono }}
+      </a>
+      
+      <a [href]="linkMapa" 
+         target="_blank" 
+         class="location-link">
+         <i class="bi bi-geo-alt-fill me-1"></i> {{ direccion }}
+      </a>
+    </div>
+
+  </div>
+</div>

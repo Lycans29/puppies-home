@@ -1,0 +1,122 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* alineacion correcta */
+  padding: 60px;
+  gap: 40px;
+}
+
+.hero-text p {
+  margin: 20px 0;
+  
+}
+
+.textoSegundario{
+  color:black;
+}
+
+/* Este es el contenedor de la derecha */
+.grid-container {
+  display: grid;
+  /* Creamos 2 columnas: la izquierda un poco más ancha */
+  grid-template-columns: 1.2fr 1fr;
+  /* Creamos 2 filas de igual altura */
+  grid-template-rows: 1fr 1fr;
+  /* Espacio entre las fotos y el cuadro */
+  gap: 20px;
+  /* Altura fija o mínima para que se vea como en tu diseño */
+  height: 450px; 
+}
+
+/* Imagen Grande (Izquierda) */
+.imgGrande {
+  grid-row: 1 / span 2; /* Ocupa desde la fila 1 y se estira 2 filas */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Evita que el perrito se deforme */
+  border-radius: 40px; /* Bordes muy redondeados como en la foto */
+}
+
+/* Imagen Pequeña (Derecha Arriba) */
+.imgPequena {
+  grid-column: 2; /* Forzamos columna 2 */
+  grid-row: 1;    
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 40px;
+  display: block;
+}
+
+/* Cuadro Verde (Derecha Abajo) */
+.grid-container .card {
+  grid-column: 2; /* Forzamos columna 2 */
+  grid-row: 2;
+  width: 100%;
+  height: 220px;
+  background-color: var(--verde-principal); 
+  border: none;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin: 0
+}
+
+/* Estilo del texto dentro del cuadro verde */
+.grid-container .card p {
+  padding-top: 40px;
+  margin: 0;
+  font-family: "Dosis", sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+}
+
+/* Icono del perro blanco */
+.icono {
+  padding-bottom: 10px;
+  width: 90px;
+  height: auto;
+  margin-top: 10px;
+  filter: brightness(0) invert(1);/* Si el SVG es negro, puedes usar 'filter: invert(1)' para hacerlo blanco */
+}
+
+
+@media (max-width: 768px) {
+  .hero-text h2, p {
+    text-align: center;
+  }
+  
+  .button-wrapper {
+    text-align: center;
+  }
+
+  /* Reduce la altura del grid en móvil */
+  .grid-container {
+    height: 280px;
+    gap: 10px;
+  }
+
+  /* Reduce el tamaño de la imagen pequeña y el cuadro verde */
+  .imgPequena,
+  .grid-container .card {
+    height: 130px;
+  }
+
+  /* Texto más pequeño dentro del cuadro verde */
+  .grid-container .card p {
+    font-size: 20px;
+    padding-top: 10px;
+  }
+
+  /* Icono más pequeño */
+  .icono {
+    display: none;
+  }
+  
+
+}  

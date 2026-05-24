@@ -1,0 +1,37 @@
+.paginacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.pag-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1.5px solid var(--verde-principal);
+  background: white;
+  color: var(--verde-principal);
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pag-btn:hover {
+  background: var(--verde-principal);
+  color: white;
+}
+
+.pag-btn.activo {
+  background: var(--verde-principal);
+  color: white;
+}
+
+.pag-btn.deshabilitado {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}

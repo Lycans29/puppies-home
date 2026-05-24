@@ -1,0 +1,25 @@
+/* Hereda el fondo verde y la fuente Manrope del styles.css global */
+
+.top-bar {
+  background-color: var(--verde-principal);
+  font-size: 18px;
+  padding: 8px 0; /* Un poco más delgado que una sección normal */
+}
+
+/* Los iconos usan el color de acento (Naranja) definido en tu global */
+.top-bar i {
+  color: white;
+}
+
+.top-bar a, .copy-item {
+  color: var(--texto-contraste); /* Variable blanca global */
+  transition: var(--transition); /* Animación suave global */
+  text-decoration: none;
+}
+
+/* Hover profesional usando tus variables */
+.top-bar a:hover, .copy-item:hover {
+  color: var(--texto-contraste);
+  text-decoration: underline;
+  opacity: 1;
+}

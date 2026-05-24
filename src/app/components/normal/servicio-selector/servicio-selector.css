@@ -1,0 +1,88 @@
+.card-servicio {
+  border: 2px solid #c6c8b0;
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  background: var(--pagina-blanco);
+  transition: var(--transition);
+}
+
+/* HOVER */
+.card-servicio:hover {
+  background: var(--verde-principal);
+  color: white;
+}
+
+.card-servicio:hover h3,
+.card-servicio:hover p {
+  color: white;
+}
+
+.card-servicio:hover .icono-box {
+  background: white;
+  color: var(--verde-principal);
+}
+
+/* ACTIVO */
+.card-servicio.active {
+  background: var(--verde-principal);
+  border-color: var(--verde-principal);
+  color: white;
+}
+
+.card-servicio.active h3,
+.card-servicio.active p {
+  color: white;
+}
+
+.card-servicio.active .icono-box {
+  background: white;
+  color: var(--verde-principal);
+}
+
+/* ICONO */
+.icono-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  background: var(--verde-principal);
+  color: white;
+}
+
+.icono-box.light {
+  background: #f2f5ec;
+  color: var(--verde-principal);
+}
+
+h3 {
+  margin: 10px 0 5px;
+}
+
+p {
+  margin: 0;
+  color: #78716c;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .card-servicio {
+    text-align: center;
+  }
+}
+
+.badge-numero {
+  background: var(--naranja-secundario);
+  color: var(--texto-contraste);
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}

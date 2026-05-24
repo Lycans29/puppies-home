@@ -1,0 +1,24 @@
+<div class="card puppy-card h-100">
+
+  <!-- BADGE DISPONIBILIDAD -->
+  <span class="badge-disponibilidad"
+    [class.bg-gris]="cachorro?.disponible"
+    [class.bg-rojo]="!cachorro?.disponible">
+    {{ cachorro?.disponible ? 'DISPONIBLE' : 'NO DISPONIBLE' }}
+  </span>
+
+  <!-- IMAGEN -->
+  <img [src]="cachorro?.imagen" class="card-img-top" [alt]="cachorro?.nombre + '-' + cachorro.raza">
+
+  <!-- CUERPO -->
+  <div class="card-body">
+    <h5>{{ cachorro?.nombre }}</h5>
+    <p>{{ cachorro?.raza }}</p>
+
+    <div class="d-flex justify-content-between align-items-center">
+      <span><i class="bi bi-calendar fs-4"></i> {{ cachorro?.edad }}</span>
+      <button class="btn-custom" (click)="verDetalle()">Conocer más →</button>
+    </div>
+  </div>
+
+</div>

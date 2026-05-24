@@ -1,0 +1,52 @@
+<section class="section-padding">
+
+  <!-- HEADER -->
+  <div class="d-flex align-items-center mb-4">
+    <div class="badge-numero">1</div>
+    <h2 class="ms-3 mb-0">¿Quién nos visita?</h2>
+  </div>
+
+  <!-- OPCIONES -->
+  <div class="row g-4">
+
+    <!-- PERRO -->
+    <div class="col-md-6">
+      <div 
+        class="card-mascota h-100"
+        [class.active]="tipoSeleccionado === 'Perro'"
+        (click)="seleccionar('Perro')">
+
+        <div class="icono-box">
+          <i class="ti ti-dog fs-1"></i>
+        </div>
+
+        <div>
+          <h3>Perro</h3>
+          <p>Para el mejor amigo del hombre</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- GATO -->
+    <div class="col-md-6">
+      <div 
+        class="card-mascota h-100"
+        [class.active]="tipoSeleccionado === 'Gato'"
+        (click)="seleccionar('Gato')">
+
+        <div class="icono-box">
+          <i class="ti ti-cat fs-1"></i>
+        </div>
+
+        <div>
+          <h3>Gato</h3>
+          <p>Para el rey de la casa</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>

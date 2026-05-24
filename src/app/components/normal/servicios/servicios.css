@@ -1,0 +1,145 @@
+.card-servicio {
+  border: 2px solid var(--rojo-terciario);
+  border-radius: 12px;
+  padding: 30px;
+  background: var(--pagina-blanco);
+  transition: var(--transition);
+}
+
+.card-servicio:hover {
+  transform: translateY(-5px);
+}
+
+
+/* VERDE */
+.card-servicio.verde {
+  background: var(--verde-principal);
+  color: var(--texto-contraste);
+}
+
+.card-servicio.verde h3,
+.card-servicio.verde p {
+  color: var(--texto-contraste);
+}
+
+/* GRANDE */
+.card-servicio.grande {
+  min-height: 100%;
+}
+
+
+.icon-top {
+  width: 45px;
+  height: 45px;
+  margin-bottom: 10px;
+}
+
+.card-serviciov {
+  background-color: var(--verde-principal);
+  color: white;
+  border: 2px solid var(--rojo-terciario);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.card-serviciov h3 {
+  color: white;
+}
+
+.card-servicio{
+  padding: 20px;
+}
+
+.card-servicio i{
+  color: var(--verde-principal);
+}
+
+.laboratorio-card {
+ padding: 20px;
+}
+.lab-texto h3 {
+  margin-bottom: 12px;
+}
+
+.lab-texto ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.lab-texto ul li {
+  font-size: 20px;
+  color: var(--texto-secundario);
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+
+.icono-circulo {
+  width: 100px;
+  height: 100px;
+  background-color: var(--naranja-secundario);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icono-circulo i {
+  color: var(--pagina-blanco);
+}
+
+
+
+/* =========================
+   LINEA TÍTULO
+========================= */
+
+.linea {
+  width: 80px;
+  height: 4px;
+  background: var(--rojo-terciario);
+  margin: 10px auto 0;
+  border-radius: 50px;
+}
+  .agenda-cita {
+    margin-top: 60px;
+  }
+
+  .agenda-cita p {
+    max-width: 800px;
+    margin: 16px auto 24px;
+    
+  }
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .laboratorio-card {
+   background-size: 0;
+  }
+
+  .lab-texto {
+    max-width: 100%;
+  }
+
+  .lab-texto h3{
+    text-align: center;
+  }
+
+  .icono-circulo {
+    display: none;
+  }
+ 
+
+  .card-servicio.verde.d-flex {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+
+}

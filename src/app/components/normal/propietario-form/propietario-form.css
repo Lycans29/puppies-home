@@ -1,0 +1,129 @@
+/* Hereda tipografía y variables del global */
+
+/* === ENCABEZADO === */
+.encabezado {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.bolita {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--naranja-secundario);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.numero {
+  font-family: 'Dosis', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--texto-contraste);
+  line-height: 1;
+}
+
+/* .titulo hereda h2 del global → Dosis, 800, verde-principal */
+
+/* === TARJETA === */
+.tarjeta {
+  background-color: var(--pagina-blanco);
+  border: 1px solid #c6c8b0;
+  border-radius: 12px;
+  padding: 24px 24px 40px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* === FORMULARIO === */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.fila-campos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* === LABEL — hereda font-family de body (Manrope) === */
+.label {
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.7px;
+  line-height: 16.8px;
+  color: #57534e;
+}
+
+/* === INPUT — hereda font-family de body === */
+.input {
+  font-size: 18px;
+  color: var(--texto-pagina);
+  background-color: #fafaf9;
+  border: 1px solid #e7e5e4;
+  border-radius: 8px;
+  padding: 13px 12px 14px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  transition: var(--transition);
+}
+
+.input::placeholder {
+  color: #6b7280;
+}
+
+.input:focus {
+  border-color: var(--verde-principal);
+  box-shadow: 0 0 0 3px rgba(160, 181, 29, 0.15);
+}
+
+/* === RESPONSIVE MÓVIL — alineado con breakpoint global === */
+@media (max-width: 768px) {
+  .encabezado {
+    gap: 12px;
+  }
+
+  .bolita {
+    width: 30px;
+    height: 30px;
+  }
+
+  .numero {
+    font-size: 15px;
+  }
+
+  /* .titulo hereda h2 del global que ya tiene font-size responsive */
+
+  .tarjeta {
+    padding: 16px 16px 28px;
+  }
+
+  .fila-campos {
+    grid-template-columns: 1fr; /* apila a una columna */
+    gap: 16px;
+  }
+
+  .input {
+    font-size: 15px;
+  }
+}
+.seccion-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 80px; /*  esto lo aleja del footer */
+}

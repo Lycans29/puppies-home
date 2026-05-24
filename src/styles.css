@@ -1,1 +1,164 @@
-/* You can add global styles to this file, and also import other style files */
+/*  ESTILOS GLOBALES Y RESPONSIVIDAD */
+
+/*  Variables de diseño */
+:root {
+  --verde-principal: #A0B51D;
+  --naranja-secundario: #F3B621;
+  --rojo-terciario: #D0262A;
+  --color-hover:#8a9c18;
+  --texto-pagina: black;
+  --texto-contraste: white;
+  --pagina-blanco: white;
+  --transition: all 0.3s ease; 
+}
+
+/* Tipografia e imagen de las paginas*/
+body {
+  font-family: 'Manrope', sans-serif;
+  color: var(--texto-pagina);
+  background-image:
+ 
+  url('/img/fondo.svg'),
+  linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #fff9c4 50%,
+    #ffe082 100%
+  );
+    
+  background-size: cover;
+  margin: 0;
+}
+/* Clase aplicada dinámicamente por AgendamientoComponent en ngOnInit/ngOnDestroy
+   para eliminar la imagen SVG de fondo solo en la página /agendamiento */
+.sin-imagen-fondo {
+  background-image: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #fff9c4 50%,
+    #ffe082 100%
+  ) !important;
+}
+
+/* Dosis 800 aplicado automáticamente a todos los títulos por herencia CSS */
+h1, h2, h3, h4, h5, .font-dosis {
+  font-family: 'Dosis', sans-serif;
+  font-weight: 800;
+  color: var(--verde-principal);
+}
+
+/* Escala tipográfica */
+h1{
+  font-size: 48px;
+}
+
+h2{
+  font-size: 40px;
+}
+
+h3{
+  font-size: 32px;
+}
+
+h4{
+  font-size: 24px;
+}
+
+h5{
+  font-size: 24px;
+}
+
+p{
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+
+/* BADGES DISPONIBILIDAD */
+.bg-gris { background-color: rgba(128, 128, 128, 0.8); }
+.bg-rojo { background-color: rgba(255, 99, 71, 0.8); }
+
+/* Boton Globales */
+/* Boton Principal */
+.btn-custom {
+  background-color: var(--verde-principal);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  display: inline-block; /* Evita problemas de alineación */
+  text-decoration: none;
+}
+
+.btn-custom:hover {
+  background-color: #8a9c18;
+  color: white;
+}
+
+/* Botón Secundario (blanco con verde) */
+.btn-secondary-custom {
+  
+  background-color: var(--pagina-blanco);
+  color: var(--verde-principal);
+  border: 2px solid var(--verde-principal);
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: 700;
+  transition: var(--transition);
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-secondary-custom:hover {
+  background-color: var(--verde-principal);
+  color: var(--texto-contraste);
+  transform: translateY(-2px);
+}
+
+/* Espaciado Global (Desktop por defecto) */
+section, .section-padding {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.espacio-sm { margin-bottom: 20px; }
+.espacio-md { margin-bottom: 40px; }
+.espacio-lg { margin-bottom: 80px; }
+
+
+
+/* --- AJUSTES PARA CELULARES (Mobile First) --- */
+@media (max-width: 768px) {
+  h1 { font-size: 48px; }
+  h2 { font-size: 40px; }
+
+  /* Clase utilitaria para colapsar grids de dos columnas en móvil.
+     Usada principalmente en ServiciosComponent y DoctoraBioComponent */
+  .stack-mobile {
+    flex-direction: column !important;
+    text-align: center !important;
+    justify-content: center !important;
+    gap: 20px !important;
+  }
+
+  /* Espaciado de secciones reducido para móvil */
+  section, .section-padding {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  /* Reducimos espacios para que en móvil no se vea "vacío" */
+  .espacio-sm { margin-bottom: 15px; }
+  .espacio-md { margin-bottom: 25px; }
+  .espacio-lg { margin-bottom: 40px; }
+
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
