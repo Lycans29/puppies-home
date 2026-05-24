@@ -102,3 +102,75 @@
   font-size: 20px;
 
 }
+
+@media (max-width: 600px) {
+  .modal-box {
+    padding: 32px 20px 28px;
+    border-radius: 16px;
+    width: 92%;
+    top: 50%;
+  }
+
+  .modal-logo img {
+    width: 120px;
+    margin-bottom: 14px;
+  }
+
+  .modal-titulo {
+    font-size: 1.4rem;
+    margin-bottom: 6px;
+  }
+
+  .modal-subtitulo {
+    font-size: 0.9rem;
+    margin-bottom: 18px;
+  }
+
+  .btn-cerrar {
+    font-size: 28px;
+    top: 12px;
+    right: 14px;
+  }
+
+  .detalles-box {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .detalles-titulo {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .detalles-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .detalle-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .detalle-icono {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 8px;
+  }
+
+  .detalle-label {
+    font-size: 11px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+
+  .detalle-valor {
+    font-size: 14px;
+  }
+}
