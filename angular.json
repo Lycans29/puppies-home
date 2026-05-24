@@ -17,7 +17,7 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "src/main.ts",
-            "baseHref": "/puppies-home",
+            "baseHref": "/puppies-home/",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
